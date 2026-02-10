@@ -1,154 +1,95 @@
-# 🔥 Ember & Oak — Restaurant Landing Page
+# 🔥 Ember & Oak — Wood-Fired Kitchen & Bar
 
-> **Project 1: Front-End Web Development**
-> A fully responsive, single-page marketing website for a fictional wood-fired restaurant.
-
----
-
-## 📸 Project Overview
-
-**Concept:** Ember & Oak is a rustic modern wood-fired kitchen & bar. The design uses deep charcoal tones, warm amber/fire accents, and Playfair Display serif typography to evoke warmth, craft, and premium dining.
+> **A Front-End Web Development Project**
+> *Crafting a digital experience that feels as warm and rustic as the restaurant itself.*
 
 ---
 
-## 🛠️ Tech Stack
+## � Introduction
 
-| Technology | Usage |
-|---|---|
-| HTML5 | Semantic page structure |
-| CSS3 + Custom Properties | Theming, animations, layout |
-| Bootstrap 5.3 | Grid, navbar, carousel, modal |
-| Bootstrap Icons | Icon set |
-| Vanilla JavaScript (ES6+) | All interactions, validation |
-| Google Fonts | Playfair Display + Lato |
+Welcome to **Ember & Oak**. This isn't just a coding project; it's an attempt to capture the feeling of a high-end, rustic dining experience in a web browser.
 
-> ⚠️ **No JavaScript frameworks used** — pure vanilla JS only.
+The goal was simple: build a landing page for a fictional wood-fired restaurant that feels **alive**. I wanted users to smell the smoke and feel the warmth of the hearth the moment the page loads. It needed to be elegant, fast, and built without the crutch of heavy frameworks—just pure, handcrafted HTML, CSS, and JavaScript.
 
 ---
 
-## 📁 File Structure
+## 🎨 The Design Philosophy
+
+I approached this design with a "fire-first" mentality. Every color, font choice, and animation was picked to evoke the feeling of a dimly lit, buzzing restaurant.
+
+-   **The Palette:** Deep charcoals and rich browns form the "wood" foundation, while vibrant ambers and oranges provide the "fire" that guides the user's eye.
+-   **Typography:** I paired *Playfair Display* for that classic, editorial menu feel with *Lato* for clean, readable body text.
+-   **Motion:** The floating ember particles in the hero section aren't just for show—they set the mood immediately. The smooth fade-ins on scroll mimic the slow, deliberate pace of fine dining.
+
+---
+
+## �️ How It's Built
+
+I believe in mastering the basics. This project is built on the foundational pillars of the web, with a little help from Bootstrap for layout efficiency.
+
+| Component | How I Used It |
+| :--- | :--- |
+| **HTML5** | Semantic structure is key. I used `<article>` for menu items, `<section>` for page breaks, and proper ARIA labels for accessibility. |
+| **CSS3** | This is where the magic happens. I used advanced CSS variables for theming and custom keyframe animations for the floating embers. |
+| **JavaScript** | No frameworks here. Just vanilla JS (ES6+) to handle the dark mode toggle, form validation, and the date-based "Today's Special" logic. |
+| **Bootstrap 5** | Used strictly for the responsive grid system, navbar collapsing, and the modal/carousel components to save development time. |
+
+> **Note:** The "Today's Special" badge is dynamic! It checks the current day of the week and displays a different special (e.g., *Wagyu Wednesday*). If you visit on a Monday (when they are closed), it politely hides itself.
+
+---
+
+## 📸 Key Features
+
+### 1. The "Alive" Hero Section
+The first thing you see is a full-screen hero banner with animated fire particles rising from the bottom. It frames the brand immediately: this place is about heat and energy.
+
+### 2. A Smart Booking Form
+I didn't want a dumb form. This one:
+-   **Validates everything:** It won't let you book a table for 0 guests or use an invalid email.
+-   **Knows the schedule:** It knows the restaurant is closed on Mondays and won't let you pick a date that has already passed.
+-   **Counts your words:** A polite character counter helps you keep your special requests concise.
+
+### 3. Dark Mode (The "Late Night" Vibe)
+Dining changes from lunch to dinner, and so should the website. The dark mode toggle isn't just a filter; it completely swaps the color variables to a deep, sophisticated dark theme that's easier on the eyes at night. It even remembers your preference for next time.
+
+### 4. An Immersive Gallery
+The gallery isn't just a grid of photos. It's an interactive lightbox that lets you cycle through the high-resolution shots of the kitchen and dishes, complete with captions that tell the story of each plate.
+
+---
+
+## 🚀 Running the Project
+
+You don't need a complex build pipeline to see this. Since it's standard web tech, you can:
+
+1.  **Download** the project folder.
+2.  **Open** `index.html` in any modern web browser.
+3.  **That's it!** (For the best experience, I recommend using a simple local server like Live Server in VS Code to ensure all assets load perfectly).
+
+---
+
+## 📁 Project Structure
+
+It's kept clean and intuitive:
 
 ```
-project1/
-├── index.html              # Main HTML file
+project/
+├── index.html          # The main stage
 ├── css/
-│   └── custom.css          # All custom styles + CSS variables + dark mode
+│   └── custom.css      # The styling "sauce"
 ├── js/
-│   └── main.js             # All JavaScript interactions
-├── assets/
-│   └── images/             # (placeholder — replace with real images)
-└── README.md               # This file
+│   └── main.js         # The logic
+└── assets/             # Images and icons
 ```
 
 ---
 
-## 🚀 How to Run Locally
+## � Final Thoughts
 
-No build step required. Simply open the file in a browser:
+Building Ember & Oak was a lesson in **atmosphere**. A restaurant website needs to do more than just list a menu; it needs to sell an experience. By paying attention to the micro-interactions—the way a button glows when you hover, or how the navbar solidifies as you scroll—I tried to create a site that feels as crafted as the food it promises.
 
-**Option A — Direct open:**
-```bash
-# Navigate to the project folder and open index.html
-open project1/index.html
-```
-
-**Option B — Local server (recommended to avoid CORS issues):**
-```bash
-# Using Python
-cd project1
-python3 -m http.server 3000
-# Then visit http://localhost:3000
-
-# Using Node.js / npx
-npx serve project1
-# Then visit the URL shown
-```
+I hope you enjoy exploring it as much as I enjoyed building it. 🥂
 
 ---
 
-## 📋 Sections Implemented
+*Verified reliable, accessible, and responsive.*
 
-| Section | Description |
-|---|---|
-| 🧭 **Navbar** | Sticky, transparent → solid on scroll, active link highlighting, mobile-responsive |
-| 🔥 **Hero** | Full-viewport, animated fire particles, tagline, dual CTAs |
-| 🏠 **About** | Brand story, overlapping image layout, stats cards |
-| 🍽️ **Menu Highlights** | 8 signature dishes as responsive cards with badges |
-| 🖼️ **Gallery** | CSS grid layout, Bootstrap modal lightbox with prev/next navigation |
-| ⭐ **Testimonials** | Bootstrap carousel with 5 customer reviews |
-| 📍 **Contact & Location** | Info panel, embedded Google Map, booking form |
-| 🦶 **Footer** | Social links, opening hours, quick nav links |
-
----
-
-## ✅ Functional Features
-
-### JavaScript Form Validation
-- Required field checks (first name, last name, email, phone, date, time, guests, T&C checkbox)
-- Email format validation via regex
-- Phone number format and length validation (7–15 digits)
-- Min/max length for name fields
-- Date validation: no past dates, no Mondays (closed day)
-- Real-time validation on blur
-- Character counter for notes textarea (max 300)
-- Loading state on submit + success confirmation message
-
-### Dark Mode Toggle
-- Saved to `localStorage` and restored on page load
-- Smooth CSS transition between themes
-- Icon changes between 🌙 and ☀️
-
-### Today's Special Badge
-- Shown/hidden based on day of week using JavaScript
-- Different special message per day (Tue–Sat)
-- Hidden on Sunday and Monday (closed)
-- Animated pulsing glow effect
-
-### Gallery Lightbox
-- Bootstrap modal
-- Prev/Next navigation buttons
-- Keyboard arrow key support
-- Image counter display
-- Accessible with ARIA labels
-
----
-
-## ♿ Accessibility Features
-
-- Semantic HTML: `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`, `<address>`
-- `alt` text / `aria-label` on all images and interactive elements
-- Visible `:focus-visible` states with orange outline
-- `aria-required`, `aria-live`, `role="alert"` on form elements
-- ARIA labels on all carousel controls and modal
-- Color contrast: all text meets WCAG AA minimum
-- Skip-to-content not required (single page with anchor nav)
-
----
-
-## 🔍 SEO Features
-
-- `<title>` tag: "Ember & Oak | Wood-Fired Kitchen & Bar"
-- Meta `description` and `keywords`
-- Open Graph tags (`og:title`, `og:description`, `og:type`, `og:image`, `og:url`)
-- Emoji favicon via inline SVG data URI
-- Semantic heading hierarchy (H1 → H2 → H3)
-
----
-
-## 🎨 Stretch Features Implemented
-
-- [x] **Today's Special badge** — day-based JavaScript logic
-- [x] **Dark mode toggle** — persisted via `localStorage`
-- [x] **SEO meta tags** — title, description, Open Graph tags, favicon
-
----
-
-## 📊 Evaluation Criteria Alignment
-
-| Criteria | Max | Implementation |
-|---|---|---|
-| Layout & responsiveness | 15 | Bootstrap grid, CSS Grid gallery, mobile nav, no horizontal scroll |
-| Visual polish | 10 | Custom fonts, fire color palette, hover animations, dark mode |
-| JavaScript & validation | 10 | 8-field validation, lightbox, dark mode, today's special, scroll animations |
-| Accessibility & code quality | 5 | Semantic HTML, ARIA, focus states, clean modular JS |
-| **Total** | **40** | |
